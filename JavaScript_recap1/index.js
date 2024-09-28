@@ -9,6 +9,9 @@ var gonderiler = [
     {email: "sueda@gamil.com", gonderi: "hava cok guzel"}
 ]
 
+var email = prompt("email giriniz:")
+var sifre = prompt("sifre giriniz:")
+
 function giris(){
     if((email == kullanicilar[0].email && sifre==kullanicilar[0].sifre )||
     (email == kullanicilar[1].email && sifre==kullanicilar[1].sifre )){
