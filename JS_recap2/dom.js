@@ -1,0 +1,1 @@
+document.getElementById("bio").innerHTML="Sueda: 2002"
