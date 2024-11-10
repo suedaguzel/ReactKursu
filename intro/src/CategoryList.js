@@ -1,21 +1,25 @@
 import React, { Component } from "react";
-import {ListGroup,ListGroupItem} from 'reactstrap'
+import { ListGroup, ListGroupItem } from "reactstrap";
 
 export default class CategoryList extends Component {
-  constructor(props){
-    super(props)
-    state:{}
+  constructor(props) {
+    super(props);
+    this.state = {
+      categories: [
+        { categoryID: 1, categoryName: "Vegatables" },
+        { categoryID: 2, categoryName: "Fruties" },
+      ],
+    };
   }
   render() {
     return (
       <div>
         <h3>{this.props.info.title}</h3>
         <ListGroup>
-          <ListGroupItem>Cras justo odio</ListGroupItem>
-          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-          <ListGroupItem>Morbi leo risus</ListGroupItem>
-          <ListGroupItem>Porta ac consectetur ac</ListGroupItem>
-          <ListGroupItem>Vestibulum at eros</ListGroupItem>
+          {this.state.categories.map (category =>
+            <ListGroupItem key={category.categoryID}>{category.categoryName}</ListGroupItem>
+          )}
+          
         </ListGroup>
       </div>
     );
